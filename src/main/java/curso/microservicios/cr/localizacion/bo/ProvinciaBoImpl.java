@@ -1,7 +1,7 @@
-package curso.cpic.cr.localizacion.bo;
+package curso.microservicios.cr.localizacion.bo;
 
-import curso.cpic.cr.localizacion.dao.ProvinciaDao;
-import curso.cpic.cr.localizacion.model.Provincia;
+import curso.microservicios.cr.localizacion.dao.ProvinciaDao;
+import curso.microservicios.cr.localizacion.model.Provincia;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

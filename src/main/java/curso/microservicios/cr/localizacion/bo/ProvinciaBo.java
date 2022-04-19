@@ -1,6 +1,6 @@
-package curso.cpic.cr.localizacion.bo;
+package curso.microservicios.cr.localizacion.bo;
 
-import curso.cpic.cr.localizacion.model.Provincia;
+import curso.microservicios.cr.localizacion.model.Provincia;
 
 import java.util.List;
 import java.util.Optional;

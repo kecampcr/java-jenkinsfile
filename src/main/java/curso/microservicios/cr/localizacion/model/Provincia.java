@@ -1,5 +1,6 @@
-package curso.cpic.cr.localizacion.model;
+package curso.microservicios.cr.localizacion.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -8,6 +9,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Entity
 @XmlRootElement
 @Table(name = "PROVINCIA")
+@AllArgsConstructor
 public class Provincia {
 
     @Id
@@ -16,5 +18,6 @@ public class Provincia {
     private Integer codProvincia;
     @Column(name="NOM_PROVINCIA")
     private String nomProvincia;
+
 
 }

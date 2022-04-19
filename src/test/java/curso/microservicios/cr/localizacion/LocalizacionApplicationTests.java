@@ -1,4 +1,4 @@
-package curso.cpic.cr.localizacion;
+package curso.microservicios.cr.localizacion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

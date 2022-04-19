@@ -1,7 +1,7 @@
-package curso.cpic.cr.localizacion.controller;
+package curso.microservicios.cr.localizacion.controller;
 
-import curso.cpic.cr.localizacion.bo.ProvinciaBo;
-import curso.cpic.cr.localizacion.model.Provincia;
+import curso.microservicios.cr.localizacion.bo.ProvinciaBo;
+import curso.microservicios.cr.localizacion.model.Provincia;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +20,8 @@ import java.util.Optional;
 @Setter
 @Slf4j
 public class ProvinciaController {
+
+    public static String URI="/Provincia";
 
     @Autowired
     private ProvinciaBo provinciaBo;
