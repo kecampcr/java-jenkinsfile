@@ -1,4 +1,4 @@
-node ('jenkins_agent01') {
+node () {
     stage('Checkout'){
         checkout scm
     }
