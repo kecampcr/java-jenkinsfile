@@ -1,0 +1,13 @@
+#Init DashboardUI
+minikube dashboard
+
+#Show cluster ip
+minikube ip
+
+#Default driver 
+minikube config set driver vmware
+https://minikube.sigs.k8s.io/docs/commands/config/ 
+#Install metrics server
+kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+minikube addons lis

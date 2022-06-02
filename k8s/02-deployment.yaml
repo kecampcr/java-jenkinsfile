@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: localizacion-ns
+  name: localizacion-dp
+  labels:
+    app: localizacion
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: localizacion
+  template:
+    metadata:
+      labels:
+        app: localizacion
+    spec:
+      containers:
+      - name: localizacion
+        image: kecampcr/localizacion:v0.0.2
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+          - name:  STAGE
+            valueFrom:
+              configMapKeyRef:
+                name:  localizacion-cm
+                key:  STAGE
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "400m"
+                    

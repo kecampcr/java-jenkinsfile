@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>curso.cpic.cr</groupId>
-	<artifactId>localizacion</artifactId>
+	<artifactId>ms-localizacion</artifactId>
 	<version>0.0.1</version>
-	<name>localizacion</name>
+	<name>ms-localizacion</name>
 	<description>Microservicio de Localizacion CR</description>
 	<properties>
 		<java.version>1.8</java.version>

@@ -32,7 +32,7 @@ public class ProvinciaController {
         return provinciaBo.findAll();
     }
 
-    @GetMapping(value = "/Provincia/{id}")
+    @GetMapping(value = "/Provincia/{id}", produces=MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Provincia> getOne(@PathVariable("id") Integer id){
         log.info(" getOne: " + id);
         ResponseEntity<Provincia> respuesta = null;
