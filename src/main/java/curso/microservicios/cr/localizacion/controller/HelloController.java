@@ -3,6 +3,7 @@ package curso.microservicios.cr.localizacion.controller;
 import curso.microservicios.cr.localizacion.beans.MessageBean;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
@@ -14,8 +15,8 @@ import java.util.Date;
 @RestController
 @Getter
 @Setter
+@Slf4j
 public class HelloController {
-
 
     @Value("${info.app.name}")
     private String appName;
@@ -28,7 +29,9 @@ public class HelloController {
     Environment env;
 
     @GetMapping(value = "/")
+
     private MessageBean sayHello(){
+        log.info(appName + ": GET /");
         String stage = "ND";
         String hostname="ND";
         if(null!=env.getProperty("STAGE")){

@@ -6,7 +6,7 @@ metadata:
   labels:
     app: localizacion
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: localizacion
@@ -17,12 +17,12 @@ spec:
     spec:
       containers:
       - name: localizacion
-        image: kecampcr/localizacion:v0.0.2
+        image: kecampcr/localizacion:v0.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
         env:
-          - name:  STAGE
+          - name: STAGE
             valueFrom:
               configMapKeyRef:
                 name:  localizacion-cm

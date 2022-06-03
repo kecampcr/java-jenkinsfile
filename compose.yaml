@@ -1,13 +1,14 @@
 version: '3'
-
 services:
   app:
-    image: 'kecampcr/localizacion:v0.0.1'
+    image: 'kecampcr/localizacion:latest'
     build:
       context: .
     container_name: app
     environment:
       - SPRING_PROFILES_ACTIVE=default
       - SPRING_JPA_SHOW_SQL=true
+      - HOSTNAME=kecamp-docker
+      - STAGE=development
     ports:
-      - 8080:8080
+      - "8080:8080"
